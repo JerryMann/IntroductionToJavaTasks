@@ -1,0 +1,11 @@
+public class Main {
+
+    //пока без валидаций
+    public static void main(String[] args) {
+        double x = Double.parseDouble(args[0]);
+        double y = Double.parseDouble(args[1]);
+
+        //task3 вычислите значение выражения по формуле
+        double result = ((Math.sin(x) + Math.cos(y)) / (Math.cos(x) - Math.sin(y))) * Math.tan(x * y);
+    }
+}
