@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+      //Вывести значение T(секунды) в формате HHч MMмин SSс.
+        task5(Integer.parseInt(args[0])); //в параметре целое число как в условии задачи
+    }
+
+    public static void task5(int T) {
+        int hour = T / 3600;    //нахожу колличество целых часов
+        int minute = T % 3600 / 60; //нахожу колличество целых минут из остатка
+        int second = T % 3600 % 60; //нахожу остаток секунд
+        System.out.println(hour+"ч "+minute+"мин "+second+"с.");
+    }
+}
