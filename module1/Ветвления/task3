@@ -1,0 +1,21 @@
+public class Main {
+
+    public static void main(String[] args) {
+        //Инициируем данные из входных параметров
+        double x1 = Double.parseDouble(args[0]);
+        double y1 = Double.parseDouble(args[1]);
+        double x2 = Double.parseDouble(args[2]);
+        double y2 = Double.parseDouble(args[3]);
+        double x3 = Double.parseDouble(args[4]);
+        double y3 = Double.parseDouble(args[5]);
+
+        //Лежат ли точки А(х1,у1)B(x2,y2)C(x3,y3) на одной прямой
+        task2(x1,y1,x2,y2,x3,y3);
+}
+
+    public static void task2(double x1, double y1, double x2, double y2, double x3, double y3) {
+        if ((x1-x2)*(y3-y2)==(x3-x2)*(y1-y2)){ //Плохо помню геометрию, потому уравнение пришлось гуглить =)
+            System.out.println("3 точки лежат на одной прямой");
+        } else System.out.println("Точки не являются кординатами одной прямой");
+    }
+}
