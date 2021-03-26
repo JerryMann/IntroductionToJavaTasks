@@ -1,0 +1,18 @@
+public class Main {
+
+    public static void main(String[] args) {
+        double a = Double.parseDouble(args[0]);
+        double b = Double.parseDouble(args[1]);
+        double c = Double.parseDouble(args[2]);
+        double d = Double.parseDouble(args[3]);
+
+        //Найдите max{min(a,b),min(c,d)}
+        task2(a,b,c,d);
+}
+
+    public static void task2(double a, double b, double c, double d) {
+        double minAb = a < b ? a : b; //находим мин. среди a и b 
+        double minCd = c < d ? c : d; //находим мин. среди c и d
+        System.out.println(minAb > minCd ? minAb : minCd); //выводим в консоль большее из меньших значение среди пар
+    }
+}
