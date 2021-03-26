@@ -1,0 +1,13 @@
+public class Main {
+
+    public static void main(String[] args) {
+    task4(Double.parseDouble(args[0])); //при условии что входящий параметр будет как в задании nnn.ddd
+    }
+    
+    public static double task4(double R) {
+        double n = Math.floor(R); //вывожу в переменную цифры перед запятой
+        double d = R - n; //вывожу в переменную цифры после запятой
+        return Math.round(d * 1000) + n / 1000; //возвращаю число, поменяв цифры местами согласно условию задачи
+        //Math.round использован для того, что бы избавится от остатка в переменной n
+    }
+}
