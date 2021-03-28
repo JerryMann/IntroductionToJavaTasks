@@ -1,0 +1,38 @@
+public class Main {
+
+    public static void main(String[] args) {
+        //Инициируем данные из входных параметров
+        //Предположим все входные данные имеют одинаковый формат длинны
+        //Данные отверстия
+        double A = Double.parseDouble(args[0]);
+        double B = Double.parseDouble(args[1]);
+
+        //Данные кирпича
+        double x = Double.parseDouble(args[2]);
+        double y = Double.parseDouble(args[3]);
+        double z = Double.parseDouble(args[4]);
+
+        //Пройдет ли кирпич с данными x,y,z в отверстие с размерами A,B
+        task4(A,B,x,y,z);
+}
+
+    public static void task4(double A, double B, double x, double y, double z) {
+        if (A > x) {
+            if (B > y || B > z) {
+                System.out.println("Кирпич пройдёт в отверстие");
+                return;
+            }
+        } else if (A > y) {
+            if (B > z || B > x) {
+                System.out.println("Кирпич пройдёт в отверстие");
+                return;
+            }
+        } else if (A > z) {
+            if (B > x || B > y) {
+                System.out.println("Кирпич пройдёт в отверстие");
+                return;
+            }
+        }
+        System.out.println("Кирпич не пройдёт");
+    }
+}
