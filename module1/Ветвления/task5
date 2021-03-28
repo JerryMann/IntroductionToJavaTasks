@@ -1,0 +1,17 @@
+public class Main {
+
+    public static void main(String[] args) {
+        //Инициируем данные из входных параметров
+        double x = Double.parseDouble(args[0]);
+
+        //Вычислить значение функции
+        double fx = task5(x);
+    }
+
+    public static double task5(double x) {
+        if (x > 3) {
+            return 1 / (Math.pow(x,3) + 6);
+        }
+        return x * x + 3 * x + 9;
+    }
+}
