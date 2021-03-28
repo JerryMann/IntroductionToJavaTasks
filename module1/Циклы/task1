@@ -1,0 +1,22 @@
+//Напишите программу, где пользователь вводит любое целое положительное число.
+//А программа суммирует все числа от 1 до введенного пользователем числа
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int sum = 0;
+        int userVar;
+        do {
+            System.out.println("Введите целое положительное число");
+            userVar = sc.nextInt();
+            if (userVar <= 0) System.out.println("Число должно быть положительным");
+        } while (userVar <= 0);
+        for (int x = 1; x <= userVar; x++){
+            sum += x;
+        }
+        System.out.println("Сумма чисел от 1 до введённого вами числа "+sum);
+    }
+}
