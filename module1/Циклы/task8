@@ -1,0 +1,22 @@
+//Даны два числа. Определить цифры, входящие в запись как первого так и второго числа
+public class Main {
+
+    public static void main(String[] args) {
+        //Инициализируем два числа из входных данных
+        int x = Integer.parseInt(args[0]);
+        int y = Integer.parseInt(args[1]);
+        printNum(x);
+        printNum(y);
+    }
+
+    //Описываем метод что бы избежать повторения кода
+    public static void printNum (int num) {
+        //Преобразуем число в массив символов
+        char[] chars = ("" + num).toCharArray();
+        System.out.print("Цифры входящие в число " + num + ": ");
+        for (int i = 0; i < chars.length; i++) {
+            System.out.print(chars[i] + "; ");
+        }
+        System.out.println();
+    }
+}
