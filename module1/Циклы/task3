@@ -1,0 +1,16 @@
+//Найдите сумму квадратов первых ста чисел
+
+public class Main {
+
+    public static void main(String[] args) {
+        int start = Integer.parseInt(args[0]); //получаем стартовое число
+        int finish = start + 99; //последнее число из задачи
+        int sum = 0;
+
+        for (int i = start; i <= finish; i++){
+            sum += i * i; //с каждым шагом прибавляем квадрат числа к сумме
+        }
+        //Выводим сумму в консоль
+        System.out.println("Сумма квадратов всех чисел от " + start + " до " + finish + " = " + sum);
+    }
+}
