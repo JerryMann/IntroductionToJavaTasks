@@ -1,0 +1,11 @@
+//Вывести на экран соответствий между символами и их численными обозначениями в памяти компьютера
+
+public class Main {
+
+    public static void main(String[] args) {
+        for (int i = 0; i <= 65536; i++) {
+            char step = (char)i;
+            System.out.println("Символ " + step + " = " + i);
+        }
+    }
+}
