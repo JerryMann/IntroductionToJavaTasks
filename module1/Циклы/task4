@@ -1,0 +1,20 @@
+//Составить программу нахождения произведения квадратов первых двухсот чисел
+
+import java.math.BigInteger;
+
+public class Main {
+
+    public static void main(String[] args) {
+        int start = 1; //получаем стартовое число
+        int finish = start + 199; //последнее число из задачи
+        BigInteger multi = BigInteger.valueOf(1L);
+        BigInteger stepSquare;
+
+        for (int i = start; i <= finish; i++){
+            stepSquare = BigInteger.valueOf(i * i);
+            multi = multi.multiply(stepSquare); //умножаем на квадрат числа текущего шага
+        }
+        //Выводим сумму в консоль
+        System.out.println("Произведение квадратов всех чисел от " + start + " до " + finish + " = " + multi);
+    }
+}
